@@ -1,0 +1,651 @@
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.2.0-125-gb379363
+2022-03-09 23:04:33,780 [screen.py:main()] - KlipperScreen version: v0.2.0-125-gb379363
+2022-03-09 23:04:33,782 [config.py:get_config_file_location()] - Passed config file: /home/pi/KlipperScreen.conf
+2022-03-09 23:04:33,782 [config.py:get_config_file_location()] - Found configuration file at: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:04:33,783 [config.py:__init__()] - Config path location: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:04:33,792 [config.py:log_config()] -  ===== Config File =====
+
+=======================
+2022-03-09 23:04:33,794 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+move_speed_xy = 200
+move_speed_z = 40
+print_sort_dir = date_desc
+theme = colorized
+confirm_estop = True
+
+[displayed_macros Printer]
+attach_probe = False
+bed_mesh_calibrate = False
+cancel_print = False
+calibrate_z = False
+m900 = False
+g0 = False
+g1 = False
+detach_probe = False
+m600 = False
+power_off_printer = False
+pause = False
+power_on_printer = False
+probe_calibrate = False
+get_probe_status = False
+probe_accept = False
+print_end = False
+probe_accuracy = False
+probe = False
+schwarzlicht_off = False
+schwarzlicht_on = False
+clean_nozzle = False
+resume = False
+print_start = False
+probe_abort = False
+query_probe = False
+status_calibrating_z = False
+quad_gantry_level = False
+blue = False
+yellow = False
+set_nozzle_leds_off = False
+red = False
+status_busy = False
+test = False
+status_meshing = False
+set_probe_status = False
+green = False
+set_nozzle_leds_on = False
+status_leveling = False
+status_ready = False
+status_off = False
+purple = False
+status_heating = False
+status_homing = False
+set_logo_leds_off = False
+status_cleaning = False
+status_printing = False
+
+=======================
+2022-03-09 23:04:33,795 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2022-03-09 23:04:33,795 [config.py:__init__()] - Detected language: None
+2022-03-09 23:04:33,807 [screen.py:__init__()] - Found wireless interfaces: ['wlan0']
+2022-03-09 23:04:33,809 [wifi.py:run()] - Setting up wifi event loop
+2022-03-09 23:04:33,810 [screen.py:__init__()] - OS Language: de_DE.UTF-8
+2022-03-09 23:04:33,994 [screen.py:__init__()] - Font settings: Sans 10
+2022-03-09 23:04:34,009 [screen.py:__init__()] - Screen resolution: 800x480
+2022-03-09 23:04:34,010 [KlippyGtk.py:__init__()] - img width: 50 height: 51
+2022-03-09 23:04:34,029 [base_panel.py:__init__()] - Button scale: [1.2, 1.4]
+2022-03-09 23:04:34,345 [screen.py:_load_panel()] - Loading panel: splash_screen
+2022-03-09 23:04:34,345 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2022-03-09 23:04:34,360 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:04:34,362 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:04:34,366 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:04:34,410 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2022-03-09 23:04:34,432 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2022-03-09 23:04:34,548 [screen.py:__init__()] - Printers: [{'Printer': {'moonraker_host': '127.0.0.1', 'moonraker_port': '7125', 'moonraker_api_key': ''}}]
+2022-03-09 23:04:34,548 [screen.py:connect_printer()] - Connecting to printer: Printer
+2022-03-09 23:04:34,562 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:04:34,565 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:04:34,568 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:04:34,583 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:04:34,583 [splash_screen.py:search_power_devices()] - Power devices: []
+2022-03-09 23:04:34,584 [splash_screen.py:search_power_devices()] - Printer power devices not found
+2022-03-09 23:04:34,587 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/machine/device_power/devices
+2022-03-09 23:04:34,595 [connectionpool.py:_new_conn()] - Starting new HTTP connection (1): 127.0.0.1:7125
+2022-03-09 23:04:34,605 [connectionpool.py:_make_request()] - http://127.0.0.1:7125 "GET /machine/device_power/devices HTTP/1.1" 200 296
+2022-03-09 23:04:34,607 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Schwarzlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Bodenlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Printer', 'status': 'off', 'locked_while_printing': True, 'type': 'gpio'}]}
+2022-03-09 23:04:34,607 [printer.py:configure_power_devices()] - Power devices: {'Schwarzlicht': {'status': 'off'}, 'Bodenlicht': {'status': 'off'}, 'Printer': {'status': 'off'}}
+2022-03-09 23:04:34,608 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:04:34,608 [splash_screen.py:search_power_devices()] - Power devices: ['Schwarzlicht', 'Bodenlicht', 'Printer']
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.2.0-125-gb379363
+2022-03-09 23:05:48,714 [screen.py:main()] - KlipperScreen version: v0.2.0-125-gb379363
+2022-03-09 23:05:48,715 [config.py:get_config_file_location()] - Passed config file: /home/pi/KlipperScreen.conf
+2022-03-09 23:05:48,715 [config.py:get_config_file_location()] - Found configuration file at: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:05:48,715 [config.py:__init__()] - Config path location: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:05:48,724 [config.py:log_config()] -  ===== Config File =====
+
+=======================
+2022-03-09 23:05:48,726 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+move_speed_xy = 200
+move_speed_z = 40
+print_sort_dir = date_desc
+theme = colorized
+confirm_estop = True
+
+[displayed_macros Printer]
+attach_probe = False
+bed_mesh_calibrate = False
+cancel_print = False
+calibrate_z = False
+m900 = False
+g0 = False
+g1 = False
+detach_probe = False
+m600 = False
+power_off_printer = False
+pause = False
+power_on_printer = False
+probe_calibrate = False
+get_probe_status = False
+probe_accept = False
+print_end = False
+probe_accuracy = False
+probe = False
+schwarzlicht_off = False
+schwarzlicht_on = False
+clean_nozzle = False
+resume = False
+print_start = False
+probe_abort = False
+query_probe = False
+status_calibrating_z = False
+quad_gantry_level = False
+blue = False
+yellow = False
+set_nozzle_leds_off = False
+red = False
+status_busy = False
+test = False
+status_meshing = False
+set_probe_status = False
+green = False
+set_nozzle_leds_on = False
+status_leveling = False
+status_ready = False
+status_off = False
+purple = False
+status_heating = False
+status_homing = False
+set_logo_leds_off = False
+status_cleaning = False
+status_printing = False
+
+=======================
+2022-03-09 23:05:48,726 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2022-03-09 23:05:48,726 [config.py:__init__()] - Detected language: None
+2022-03-09 23:05:48,732 [screen.py:__init__()] - Found wireless interfaces: ['wlan0']
+2022-03-09 23:05:48,733 [wifi.py:run()] - Setting up wifi event loop
+2022-03-09 23:05:48,735 [screen.py:__init__()] - OS Language: de_DE.UTF-8
+2022-03-09 23:05:48,879 [screen.py:__init__()] - Font settings: Sans 10
+2022-03-09 23:05:48,887 [screen.py:__init__()] - Screen resolution: 800x480
+2022-03-09 23:05:48,887 [KlippyGtk.py:__init__()] - img width: 50 height: 51
+2022-03-09 23:05:48,906 [base_panel.py:__init__()] - Button scale: [1.2, 1.4]
+2022-03-09 23:05:48,978 [screen.py:_load_panel()] - Loading panel: splash_screen
+2022-03-09 23:05:48,979 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2022-03-09 23:05:48,992 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:05:48,994 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:05:48,997 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:05:49,037 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2022-03-09 23:05:49,059 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2022-03-09 23:05:49,150 [screen.py:__init__()] - Printers: [{'Printer': {'moonraker_host': '127.0.0.1', 'moonraker_port': '7125', 'moonraker_api_key': ''}}]
+2022-03-09 23:05:49,150 [screen.py:connect_printer()] - Connecting to printer: Printer
+2022-03-09 23:05:49,162 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:05:49,165 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:05:49,168 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:05:49,183 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:05:49,183 [splash_screen.py:search_power_devices()] - Power devices: []
+2022-03-09 23:05:49,184 [splash_screen.py:search_power_devices()] - Printer power devices not found
+2022-03-09 23:05:49,187 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/machine/device_power/devices
+2022-03-09 23:05:49,193 [connectionpool.py:_new_conn()] - Starting new HTTP connection (1): 127.0.0.1:7125
+2022-03-09 23:05:49,200 [connectionpool.py:_make_request()] - http://127.0.0.1:7125 "GET /machine/device_power/devices HTTP/1.1" 200 295
+2022-03-09 23:05:49,202 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Schwarzlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Bodenlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Printer', 'status': 'on', 'locked_while_printing': True, 'type': 'gpio'}]}
+2022-03-09 23:05:49,202 [printer.py:configure_power_devices()] - Power devices: {'Schwarzlicht': {'status': 'off'}, 'Bodenlicht': {'status': 'off'}, 'Printer': {'status': 'on'}}
+2022-03-09 23:05:49,203 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:05:49,203 [splash_screen.py:search_power_devices()] - Power devices: ['Schwarzlicht', 'Bodenlicht', 'Printer']
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.2.0-125-gb379363
+2022-03-09 23:05:58,784 [screen.py:main()] - KlipperScreen version: v0.2.0-125-gb379363
+2022-03-09 23:05:58,785 [config.py:get_config_file_location()] - Passed config file: /home/pi/KlipperScreen.conf
+2022-03-09 23:05:58,786 [config.py:get_config_file_location()] - Found configuration file at: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:05:58,786 [config.py:__init__()] - Config path location: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:05:58,794 [config.py:log_config()] -  ===== Config File =====
+
+=======================
+2022-03-09 23:05:58,796 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+move_speed_xy = 200
+move_speed_z = 40
+print_sort_dir = date_desc
+theme = colorized
+confirm_estop = True
+
+[displayed_macros Printer]
+attach_probe = False
+bed_mesh_calibrate = False
+cancel_print = False
+calibrate_z = False
+m900 = False
+g0 = False
+g1 = False
+detach_probe = False
+m600 = False
+power_off_printer = False
+pause = False
+power_on_printer = False
+probe_calibrate = False
+get_probe_status = False
+probe_accept = False
+print_end = False
+probe_accuracy = False
+probe = False
+schwarzlicht_off = False
+schwarzlicht_on = False
+clean_nozzle = False
+resume = False
+print_start = False
+probe_abort = False
+query_probe = False
+status_calibrating_z = False
+quad_gantry_level = False
+blue = False
+yellow = False
+set_nozzle_leds_off = False
+red = False
+status_busy = False
+test = False
+status_meshing = False
+set_probe_status = False
+green = False
+set_nozzle_leds_on = False
+status_leveling = False
+status_ready = False
+status_off = False
+purple = False
+status_heating = False
+status_homing = False
+set_logo_leds_off = False
+status_cleaning = False
+status_printing = False
+
+=======================
+2022-03-09 23:05:58,797 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2022-03-09 23:05:58,797 [config.py:__init__()] - Detected language: None
+2022-03-09 23:05:58,802 [screen.py:__init__()] - Found wireless interfaces: ['wlan0']
+2022-03-09 23:05:58,804 [wifi.py:run()] - Setting up wifi event loop
+2022-03-09 23:05:58,806 [screen.py:__init__()] - OS Language: de_DE.UTF-8
+2022-03-09 23:05:58,951 [screen.py:__init__()] - Font settings: Sans 10
+2022-03-09 23:05:58,958 [screen.py:__init__()] - Screen resolution: 800x480
+2022-03-09 23:05:58,959 [KlippyGtk.py:__init__()] - img width: 50 height: 51
+2022-03-09 23:05:58,976 [base_panel.py:__init__()] - Button scale: [1.2, 1.4]
+2022-03-09 23:05:59,048 [screen.py:_load_panel()] - Loading panel: splash_screen
+2022-03-09 23:05:59,048 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2022-03-09 23:05:59,061 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:05:59,063 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:05:59,066 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:05:59,105 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2022-03-09 23:05:59,127 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2022-03-09 23:05:59,218 [screen.py:__init__()] - Printers: [{'Printer': {'moonraker_host': '127.0.0.1', 'moonraker_port': '7125', 'moonraker_api_key': ''}}]
+2022-03-09 23:05:59,218 [screen.py:connect_printer()] - Connecting to printer: Printer
+2022-03-09 23:05:59,230 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:05:59,233 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:05:59,235 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:05:59,253 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:05:59,253 [splash_screen.py:search_power_devices()] - Power devices: []
+2022-03-09 23:05:59,254 [splash_screen.py:search_power_devices()] - Printer power devices not found
+2022-03-09 23:05:59,257 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/machine/device_power/devices
+2022-03-09 23:05:59,263 [connectionpool.py:_new_conn()] - Starting new HTTP connection (1): 127.0.0.1:7125
+2022-03-09 23:05:59,269 [connectionpool.py:_make_request()] - http://127.0.0.1:7125 "GET /machine/device_power/devices HTTP/1.1" 200 295
+2022-03-09 23:05:59,271 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Schwarzlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Bodenlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Printer', 'status': 'on', 'locked_while_printing': True, 'type': 'gpio'}]}
+2022-03-09 23:05:59,271 [printer.py:configure_power_devices()] - Power devices: {'Schwarzlicht': {'status': 'off'}, 'Bodenlicht': {'status': 'off'}, 'Printer': {'status': 'on'}}
+2022-03-09 23:05:59,272 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:05:59,272 [splash_screen.py:search_power_devices()] - Power devices: ['Schwarzlicht', 'Bodenlicht', 'Printer']
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.2.0-125-gb379363
+2022-03-09 23:07:52,627 [screen.py:main()] - KlipperScreen version: v0.2.0-125-gb379363
+2022-03-09 23:07:52,628 [config.py:get_config_file_location()] - Passed config file: /home/pi/KlipperScreen.conf
+2022-03-09 23:07:52,630 [config.py:get_config_file_location()] - Found configuration file at: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:07:52,630 [config.py:__init__()] - Config path location: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:07:52,639 [config.py:log_config()] -  ===== Config File =====
+
+=======================
+2022-03-09 23:07:52,641 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+move_speed_xy = 200
+move_speed_z = 40
+print_sort_dir = date_desc
+theme = colorized
+confirm_estop = True
+
+[displayed_macros Printer]
+attach_probe = False
+bed_mesh_calibrate = False
+cancel_print = False
+calibrate_z = False
+m900 = False
+g0 = False
+g1 = False
+detach_probe = False
+m600 = False
+power_off_printer = False
+pause = False
+power_on_printer = False
+probe_calibrate = False
+get_probe_status = False
+probe_accept = False
+print_end = False
+probe_accuracy = False
+probe = False
+schwarzlicht_off = False
+schwarzlicht_on = False
+clean_nozzle = False
+resume = False
+print_start = False
+probe_abort = False
+query_probe = False
+status_calibrating_z = False
+quad_gantry_level = False
+blue = False
+yellow = False
+set_nozzle_leds_off = False
+red = False
+status_busy = False
+test = False
+status_meshing = False
+set_probe_status = False
+green = False
+set_nozzle_leds_on = False
+status_leveling = False
+status_ready = False
+status_off = False
+purple = False
+status_heating = False
+status_homing = False
+set_logo_leds_off = False
+status_cleaning = False
+status_printing = False
+
+=======================
+2022-03-09 23:07:52,642 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2022-03-09 23:07:52,642 [config.py:__init__()] - Detected language: None
+2022-03-09 23:07:52,649 [screen.py:__init__()] - Found wireless interfaces: ['wlan0']
+2022-03-09 23:07:52,651 [wifi.py:run()] - Setting up wifi event loop
+2022-03-09 23:07:52,651 [screen.py:__init__()] - OS Language: de_DE.UTF-8
+2022-03-09 23:07:52,849 [screen.py:__init__()] - Font settings: Sans 10
+2022-03-09 23:07:52,864 [screen.py:__init__()] - Screen resolution: 800x480
+2022-03-09 23:07:52,864 [KlippyGtk.py:__init__()] - img width: 50 height: 51
+2022-03-09 23:07:52,884 [base_panel.py:__init__()] - Button scale: [1.2, 1.4]
+2022-03-09 23:07:53,315 [screen.py:_load_panel()] - Loading panel: splash_screen
+2022-03-09 23:07:53,315 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2022-03-09 23:07:53,330 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:07:53,333 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:07:53,336 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:07:53,380 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2022-03-09 23:07:53,403 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2022-03-09 23:07:53,521 [screen.py:__init__()] - Printers: [{'Printer': {'moonraker_host': '127.0.0.1', 'moonraker_port': '7125', 'moonraker_api_key': ''}}]
+2022-03-09 23:07:53,522 [screen.py:connect_printer()] - Connecting to printer: Printer
+2022-03-09 23:07:53,542 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:07:53,547 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:07:53,551 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:07:53,577 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:07:53,577 [splash_screen.py:search_power_devices()] - Power devices: []
+2022-03-09 23:07:53,578 [splash_screen.py:search_power_devices()] - Printer power devices not found
+2022-03-09 23:07:53,584 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/machine/device_power/devices
+2022-03-09 23:07:53,595 [connectionpool.py:_new_conn()] - Starting new HTTP connection (1): 127.0.0.1:7125
+2022-03-09 23:07:53,809 [connectionpool.py:_make_request()] - http://127.0.0.1:7125 "GET /machine/device_power/devices HTTP/1.1" 200 295
+2022-03-09 23:07:53,811 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Schwarzlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Bodenlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Printer', 'status': 'on', 'locked_while_printing': True, 'type': 'gpio'}]}
+2022-03-09 23:07:53,811 [printer.py:configure_power_devices()] - Power devices: {'Schwarzlicht': {'status': 'off'}, 'Bodenlicht': {'status': 'off'}, 'Printer': {'status': 'on'}}
+2022-03-09 23:07:53,812 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:07:53,812 [splash_screen.py:search_power_devices()] - Power devices: ['Schwarzlicht', 'Bodenlicht', 'Printer']
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.2.0-125-gb379363
+2022-03-09 23:09:46,098 [screen.py:main()] - KlipperScreen version: v0.2.0-125-gb379363
+2022-03-09 23:09:46,099 [config.py:get_config_file_location()] - Passed config file: /home/pi/KlipperScreen.conf
+2022-03-09 23:09:46,101 [config.py:get_config_file_location()] - Found configuration file at: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:09:46,101 [config.py:__init__()] - Config path location: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:09:46,111 [config.py:log_config()] -  ===== Config File =====
+
+=======================
+2022-03-09 23:09:46,113 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+move_speed_xy = 200
+move_speed_z = 40
+print_sort_dir = date_desc
+theme = colorized
+confirm_estop = True
+
+[displayed_macros Printer]
+attach_probe = False
+bed_mesh_calibrate = False
+cancel_print = False
+calibrate_z = False
+m900 = False
+g0 = False
+g1 = False
+detach_probe = False
+m600 = False
+power_off_printer = False
+pause = False
+power_on_printer = False
+probe_calibrate = False
+get_probe_status = False
+probe_accept = False
+print_end = False
+probe_accuracy = False
+probe = False
+schwarzlicht_off = False
+schwarzlicht_on = False
+clean_nozzle = False
+resume = False
+print_start = False
+probe_abort = False
+query_probe = False
+status_calibrating_z = False
+quad_gantry_level = False
+blue = False
+yellow = False
+set_nozzle_leds_off = False
+red = False
+status_busy = False
+test = False
+status_meshing = False
+set_probe_status = False
+green = False
+set_nozzle_leds_on = False
+status_leveling = False
+status_ready = False
+status_off = False
+purple = False
+status_heating = False
+status_homing = False
+set_logo_leds_off = False
+status_cleaning = False
+status_printing = False
+
+=======================
+2022-03-09 23:09:46,113 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2022-03-09 23:09:46,113 [config.py:__init__()] - Detected language: None
+2022-03-09 23:09:46,125 [screen.py:__init__()] - Found wireless interfaces: ['wlan0']
+2022-03-09 23:09:46,127 [wifi.py:run()] - Setting up wifi event loop
+2022-03-09 23:09:46,128 [screen.py:__init__()] - OS Language: de_DE.UTF-8
+2022-03-09 23:09:46,328 [screen.py:__init__()] - Font settings: Sans 10
+2022-03-09 23:09:46,343 [screen.py:__init__()] - Screen resolution: 800x480
+2022-03-09 23:09:46,343 [KlippyGtk.py:__init__()] - img width: 50 height: 51
+2022-03-09 23:09:46,363 [base_panel.py:__init__()] - Button scale: [1.2, 1.4]
+2022-03-09 23:09:46,763 [screen.py:_load_panel()] - Loading panel: splash_screen
+2022-03-09 23:09:46,763 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2022-03-09 23:09:46,784 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:09:46,788 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:09:46,793 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:09:46,853 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2022-03-09 23:09:46,883 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2022-03-09 23:09:46,999 [screen.py:__init__()] - Printers: [{'Printer': {'moonraker_host': '127.0.0.1', 'moonraker_port': '7125', 'moonraker_api_key': ''}}]
+2022-03-09 23:09:47,000 [screen.py:connect_printer()] - Connecting to printer: Printer
+2022-03-09 23:09:47,012 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:09:47,015 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:09:47,018 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:09:47,033 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:09:47,033 [splash_screen.py:search_power_devices()] - Power devices: []
+2022-03-09 23:09:47,034 [splash_screen.py:search_power_devices()] - Printer power devices not found
+2022-03-09 23:09:47,037 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/machine/device_power/devices
+2022-03-09 23:09:47,044 [connectionpool.py:_new_conn()] - Starting new HTTP connection (1): 127.0.0.1:7125
+2022-03-09 23:09:47,106 [connectionpool.py:_make_request()] - http://127.0.0.1:7125 "GET /machine/device_power/devices HTTP/1.1" 200 295
+2022-03-09 23:09:47,109 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Schwarzlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Bodenlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Printer', 'status': 'on', 'locked_while_printing': True, 'type': 'gpio'}]}
+2022-03-09 23:09:47,109 [printer.py:configure_power_devices()] - Power devices: {'Schwarzlicht': {'status': 'off'}, 'Bodenlicht': {'status': 'off'}, 'Printer': {'status': 'on'}}
+2022-03-09 23:09:47,110 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:09:47,110 [splash_screen.py:search_power_devices()] - Power devices: ['Schwarzlicht', 'Bodenlicht', 'Printer']
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.2.0-125-gb379363
+2022-03-09 23:11:39,800 [screen.py:main()] - KlipperScreen version: v0.2.0-125-gb379363
+2022-03-09 23:11:39,801 [config.py:get_config_file_location()] - Passed config file: /home/pi/KlipperScreen.conf
+2022-03-09 23:11:39,803 [config.py:get_config_file_location()] - Found configuration file at: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:11:39,803 [config.py:__init__()] - Config path location: /home/pi/klipper_config/KlipperScreen.conf
+2022-03-09 23:11:39,812 [config.py:log_config()] -  ===== Config File =====
+
+=======================
+2022-03-09 23:11:39,814 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+move_speed_xy = 200
+move_speed_z = 40
+print_sort_dir = date_desc
+theme = colorized
+confirm_estop = True
+
+[displayed_macros Printer]
+attach_probe = False
+bed_mesh_calibrate = False
+cancel_print = False
+calibrate_z = False
+m900 = False
+g0 = False
+g1 = False
+detach_probe = False
+m600 = False
+power_off_printer = False
+pause = False
+power_on_printer = False
+probe_calibrate = False
+get_probe_status = False
+probe_accept = False
+print_end = False
+probe_accuracy = False
+probe = False
+schwarzlicht_off = False
+schwarzlicht_on = False
+clean_nozzle = False
+resume = False
+print_start = False
+probe_abort = False
+query_probe = False
+status_calibrating_z = False
+quad_gantry_level = False
+blue = False
+yellow = False
+set_nozzle_leds_off = False
+red = False
+status_busy = False
+test = False
+status_meshing = False
+set_probe_status = False
+green = False
+set_nozzle_leds_on = False
+status_leveling = False
+status_ready = False
+status_off = False
+purple = False
+status_heating = False
+status_homing = False
+set_logo_leds_off = False
+status_cleaning = False
+status_printing = False
+
+=======================
+2022-03-09 23:11:39,814 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2022-03-09 23:11:39,815 [config.py:__init__()] - Detected language: None
+2022-03-09 23:11:39,827 [screen.py:__init__()] - Found wireless interfaces: ['wlan0']
+2022-03-09 23:11:39,828 [wifi.py:run()] - Setting up wifi event loop
+2022-03-09 23:11:39,829 [screen.py:__init__()] - OS Language: de_DE.UTF-8
+2022-03-09 23:11:40,045 [screen.py:__init__()] - Font settings: Sans 10
+2022-03-09 23:11:40,062 [screen.py:__init__()] - Screen resolution: 800x480
+2022-03-09 23:11:40,062 [KlippyGtk.py:__init__()] - img width: 50 height: 51
+2022-03-09 23:11:40,086 [base_panel.py:__init__()] - Button scale: [1.2, 1.4]
+2022-03-09 23:11:40,548 [screen.py:_load_panel()] - Loading panel: splash_screen
+2022-03-09 23:11:40,548 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2022-03-09 23:11:40,562 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:11:40,565 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:11:40,571 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:11:40,616 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2022-03-09 23:11:40,639 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2022-03-09 23:11:40,757 [screen.py:__init__()] - Printers: [{'Printer': {'moonraker_host': '127.0.0.1', 'moonraker_port': '7125', 'moonraker_api_key': ''}}]
+2022-03-09 23:11:40,758 [screen.py:connect_printer()] - Connecting to printer: Printer
+2022-03-09 23:11:40,770 [screen.py:show_panel()] - Attaching panel splash_screen
+2022-03-09 23:11:40,773 [screen.py:show_panel()] - Showing back. count: 0
+2022-03-09 23:11:40,776 [screen.py:show_panel()] - Current panel hierarchy: ['splash_screen']
+2022-03-09 23:11:40,792 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:11:40,792 [splash_screen.py:search_power_devices()] - Power devices: []
+2022-03-09 23:11:40,792 [splash_screen.py:search_power_devices()] - Printer power devices not found
+2022-03-09 23:11:40,796 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/machine/device_power/devices
+2022-03-09 23:11:40,802 [connectionpool.py:_new_conn()] - Starting new HTTP connection (1): 127.0.0.1:7125
+2022-03-09 23:11:40,818 [connectionpool.py:_make_request()] - http://127.0.0.1:7125 "GET /machine/device_power/devices HTTP/1.1" 200 295
+2022-03-09 23:11:40,821 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Schwarzlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Bodenlicht', 'status': 'off', 'locked_while_printing': False, 'type': 'gpio'}, {'device': 'Printer', 'status': 'on', 'locked_while_printing': True, 'type': 'gpio'}]}
+2022-03-09 23:11:40,821 [printer.py:configure_power_devices()] - Power devices: {'Schwarzlicht': {'status': 'off'}, 'Bodenlicht': {'status': 'off'}, 'Printer': {'status': 'on'}}
+2022-03-09 23:11:40,822 [splash_screen.py:search_power_devices()] - Connecting to Printer
+2022-03-09 23:11:40,823 [splash_screen.py:search_power_devices()] - Power devices: ['Schwarzlicht', 'Bodenlicht', 'Printer']
+2022-03-09 23:12:49,348 [screen.py:<module>()] - Fatal error in main loop
+Traceback (most recent call last):
+  File "/home/pi/KlipperScreen/screen.py", line 1037, in <module>
+    main()
+  File "/home/pi/KlipperScreen/screen.py", line 1029, in main
+    win = KlipperScreen(args, version)
+  File "/home/pi/KlipperScreen/screen.py", line 155, in __init__
+    self.connect_printer(pname)
+  File "/home/pi/KlipperScreen/screen.py", line 245, in connect_printer
+    self.panels['splash_screen'].show_restart_buttons()
+  File "/home/pi/KlipperScreen/panels/splash_screen.py", line 80, in show_restart_buttons
+    self.search_power_devices()
+  File "/home/pi/KlipperScreen/panels/splash_screen.py", line 105, in search_power_devices
+    found_devices.append(power_device)
+MemoryError
